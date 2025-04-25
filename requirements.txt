@@ -3,3 +3,4 @@ TgCrypto
 yt-dlp
 hachoir
 python-dotenv
+flask

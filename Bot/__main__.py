@@ -2,6 +2,8 @@ from . import client
 from pyrogram import idle
 from .config import Config
 import os
+from helper import keep_alive
+keep_alive()
 
 
 async def main():

@@ -1,11 +1,18 @@
 services:
-  - type: web
-    name: bulkloader-bot
-    env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python Bot/__main__.py"
-    plan: free
-    envVars:
-      - key: TELEGRAM_API_KEY
-        sync: false
+  - type: web
+    name: bulkloader-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 -m Bot"
+    plan: free
+    envVars:
+      - key: APP_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+
         

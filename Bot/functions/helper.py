@@ -181,3 +181,17 @@ async def absolute_paths(directory: str):
     for dirpath, _, filenames in os.walk(directory):
         for f in filenames:
             yield os.path.abspath(os.path.join(dirpath, f))
+
+console.log("Bot is running!");
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Bot is running!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

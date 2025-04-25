@@ -13,7 +13,8 @@ from hachoir.parser import createParser
 from pyrogram.types import Message
 from ..config import Config
 from .. import client
-
+from flask import Flask
+import threading
 
 FFMPEG_REGEX = re.compile(
     pattern=r'(?:ftp|amqp|rtmp|mmsh|mmst|icecast|rtmpe|rtmps|rtmpt|rtmpte|rtmpts|smb|sftp|rtp|rtsp|sap|sctp|srt|srtp|tcp|tls|udp|unix|zmq)://(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&//=]*)')
@@ -182,16 +183,15 @@ async def absolute_paths(directory: str):
         for f in filenames:
             yield os.path.abspath(os.path.join(dirpath, f))
 
-console.log("Bot is running!");
-const express = require('express');
-const app = express();
+app = Flask(__name__)
 
-const PORT = process.env.PORT || 3000;
+@app.route('/')
+def home():
+    return "Bot is running!"
 
-app.get('/', (req, res) => {
-  res.send('Bot is running!');
-});
+def run():
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+def keep_alive():
+    threading.Thread(target=run).start()

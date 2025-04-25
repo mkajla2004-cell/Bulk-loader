@@ -6,10 +6,7 @@ services:
     startCommand: "python3 -m Bot"
     plan: free
     envVars:
-      - key: APP_ID
-      - key: API_HASH
-      - key: BOT_TOKEN
-      - key: OWNER_ID
+      - key: APP_ID, API_HASH, BOT_TOKEN,OWNER_ID
         sync: false
 
         

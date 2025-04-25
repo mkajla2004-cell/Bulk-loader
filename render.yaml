@@ -7,11 +7,8 @@ services:
     plan: free
     envVars:
       - key: APP_ID
-        sync: false
       - key: API_HASH
-        sync: false
       - key: BOT_TOKEN
-        sync: false
       - key: OWNER_ID
         sync: false
 

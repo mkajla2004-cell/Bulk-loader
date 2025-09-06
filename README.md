@@ -1,6 +1,6 @@
 <h1 align="center" style="font-family: 'Comic'Comic
   MS', cursive;">
-  🕸️ SPIDY UNIVERSE 🕷️
+  ❤️ jaat uploader ❤️
 </h1>
 
 <p align="center">
@@ -78,5 +78,5 @@ Feel free to reach out or open an issue if you get stuck!
 ---
 
 <p align="center">
-  Made with ❤️ in the <b>SPIDY UNIVERSE</b>
+  Made with ❤️ in the <b>MANISH</b>
 </p>
